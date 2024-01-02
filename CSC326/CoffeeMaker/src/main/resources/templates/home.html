@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+<!-- Much of this code is from or based on the W3Schools website, including creating tabs and general styling: https://www.w3schools.com/ -->
+ 
+<style>
+  body {
+	font-family: Chalkduster, sans-serif;
+	background-color: #c2a286; /*Brown*/
+	color: white; /* Controls all text color */
+  }
+  
+  h1 {
+      text-align: center;
+	margin-top: 30px;
+	font-size: 40px;
+  }
+ 
+  /* Style the entire tab bar */
+.tab {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  border : 2px solid black;
+  margin-top: 20px;
+  display: inline-block;
+
+  }
+  
+ /*Centers the entire tab bar on the page*/
+div.tab-container {
+  text-align: center;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 505;  
+  border : 2px solid black;
+  font-family: Calibri, sans-serif;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #5cd9ff;
+}
+ 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+ 
+</style>
+</head>
+  <body>
+  <div class ="tab-container"> 
+  <h1>Welcome to CoffeeMaker!</h1>
+    
+<hr style="color:green;">
+
+<div class="tab">
+  <button class="active">Home</button>
+  <button class="tablinks">Add Recipe</button>
+  <button class="tablinks">Add Ingredient</button>
+  <button class="tablinks">Edit Recipe</button>
+  <button class="tablinks">Delete Recipe</button>
+  <button class="tablinks">Order Beverage</button>
+  <button class="tablinks">Update Inventory</button>
+</div>
+  </div>
+
+<br/> 
+<br/>
+<br/> 
+<p style="text-align: center; font-size: 30px;"><strong> Today's good mood is sponsored by coffee.</strong></p>
+    
+	<img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/22711/cup-of-coffee-clipart-xl.png" width="400" height="300">
+  </body>
+</html>

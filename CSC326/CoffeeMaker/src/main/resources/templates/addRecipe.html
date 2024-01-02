@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Much of this code is from or based on the W3Schools website, including creating tabs and general styling: https://www.w3schools.com/ -->
+ 
+<style>
+* {
+  box-sizing: border-box;
+}
+  body {
+	font-family: Calibri, sans-serif;
+	background-color: #c2a286; /*Brown*/
+	color: white; /* Controls all text color */
+  }
+  h1 {
+      text-align: center;
+	margin-top: 30px;
+	font-size: 40px;
+    font-family: Chalkduster, sans-serif;
+  }
+ 
+  /* Style the entire tab bar */
+.tab {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  border : 2px solid black;
+  margin-top: 20px;
+  display: inline-block;
+}
+  
+ /*Centers the entire tab bar on the page*/
+div.tab-container {
+  text-align: center;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 505;  
+  border : 2px solid black;
+  font-family: Calibri, sans-serif;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #5cd9ff;
+}
+ 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+  
+form {
+	border: 2px solid black;
+  border-radius: 4px;
+  display: inline-block;
+}
+  
+/* Create two equal columns that float next to each other */
+.column {
+	
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 400px; 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+p2 {
+  text-align: left;
+}
+
+</style>
+</head>
+
+<body>
+  <div class ="tab-container"> 
+    <h1>Welcome to CoffeeMaker!</h1>
+    <hr style="color:green;">
+
+    <div class="tab">
+      <button class="tablinks">Home</button>
+      <button class="active">Add Recipe</button>
+      <button class="tablinks">Add Ingredient</button>
+      <button class="tablinks">Edit Recipe</button>
+      <button class="tablinks">Delete Recipe</button>
+      <button class="tablinks">Order Beverage</button>
+      <button class="tablinks">Update Inventory</button>
+    </div>
+  </div>
+  
+  <p style="text-align: center; font-size: 30px; font-family: Chalkduster, sans-serif;"> Add a Recipe</p>
+  <div class="row">
+
+    <div class="column" style="background-color:#c2a286;">
+      <p style="text-align: center; font-size: 20px; font-family: Chalkduster, sans-serif;">Enter Recipe</p>
+    <div ng-app="myApp" ng-controller="populateCtrl"> <!-- **Opening div tag** -->
+    
+    <form action="/action_page.php">
+      
+          <input type="text" ng-model="name" required="true" style="font-size:15px;" placeholder="Name"><br>
+          <input type="text" ng-model="price" required="true" style="font-size:15px;" placeholder="Price">
+          <br>
+ 
+         <div class="row">
+           <div class="form-group col-md-12">
+             <label class="col-md-2 control-lable" for="file">Coffee</label>
+		     <div class="col-md-7">
+			   <input type="number" ng-model="recipe.coffee" name="coffee"
+			   class="coffee form-control input-sm"
+			   placeholder="Enter amount of coffee" required="true" />	
+		</div>
+	</div>
+</div>
+<div class="row">
+  <div class="form-group col-md-12">
+    <label class="col-md-2 control-lable" for="file">Milk</label>
+		<div class="col-md-7">
+			<input type="number" ng-model="recipe.milk" name="milk"
+			class="milk form-control input-sm"
+			placeholder="Enter amount of milk" required="true" />	
+			
+		</div>
+	</div>
+</div>
+<div class="row">
+  <div class="form-group col-md-12">
+    <label class="col-md-2 control-lable" for="file">Black Tea</label>
+		<div class="col-md-7">
+			<input type="number" ng-model="recipe.blacktea" name="Black Tea"
+			class="black tea form-control input-sm"
+			placeholder="Enter amount of black tea" required="true" />	
+			
+		</div>
+	</div>
+</div>
+<div class="row">
+  <div class="form-group col-md-12">
+    <label class="col-md-2 control-lable" for="file">Honey</label>
+		<div class="col-md-7">
+			<input type="number" ng-model="recipe.honey" name="Honey"
+			class="honey form-control input-sm"
+			placeholder="Enter amount of honey" required="true" />
+			
+		</div>
+	</div>
+</div>
+<div class="row">
+  <div class="form-group col-md-12">
+    <label class="col-md-2 control-lable" for="file">Sugar</label>
+		<div class="col-md-7">
+			<input type="number" ng-model="recipe.sugar" name="sugar"
+			class="sugar form-control input-sm"
+			placeholder="Enter amount of sugar" required="true" />
+			
+		</div>
+	</div>
+</div>
+<div class="row">
+  <div class="form-group col-md-12">
+    <label class="col-md-2 control-lable" for="file">Chocolate</label>
+		<div class="col-md-7">
+			<input type="number" ng-model="recipe.chocolate" name="chocolate"
+			class="chocolate form-control input-sm"
+			placeholder="Enter amount of chocolate" required="true" />
+			
+		</div>
+	</div>
+</div>
+</form>
+      
+                   
+    <br/>
+    <input type="submit" value="Add Recipe" ng-click="addRecipeSuccess()" style="background-color:#c27ba0; font-size:15px;"
+    ng-if="recipe.coffee >= 0 && recipe.milk >= 0 && recipe.blacktea >= 0 && recipe.honey >= 0 && recipe.sugar >= 0 && recipe.chocolate >= 0 && price >= 0;">
+	</div> <!-- **Closing div tag for JS 'myApp' and 'populateCtrl'** -->
+  </div>    
+  
+  <br/><br/><br/><br/>
+ 
+ 
+<div class="column" style="background-color:#c2a286;">
+  <p style="text-align: center; font-size: 20px; font-family: Chalkduster, sans-serif;">Current Recipes
+  </p>
+    
+  <div style="height:auto;width:100%;border:2px solid #000000;overflow:auto; background-color:white; color:black;">
+    <p2>
+    <ul ng-init="updateList()"></ul>
+    </p2>
+    
+  </div>
+</div>
+</div>
+
+
+		<script>
+			/* Without these comments, Thymeleaf will try to parse the Javascript as XML and break itself sometimes */
+			/*<![CDATA[*/ 
+			var app = angular.module('myApp', []);
+			app.controller('populateCtrl', function($scope, $http, $q) {
+				
+				// Get list of current recipes
+				$http.get("/api/v1/recipes").then(function(response) {
+					$scope.recipeList = response.data;
+				});
+				
+				// Update current recipes list
+				$scope.updateList = function() {
+				  $scope.updateList.append('<ul>');
+				  for(let i =0; i < $scope.recipeList.length; i++) {
+					$scope.updateList.append('<li><h2>' + $scope.recipeList[i].name + '</h2></li>');
+					
+				  }
+				  $scope.updateList.append('</ul>');
+				};
+			
+
+				// Successful add recipe
+				$scope.addRecipeSuccess = function() {
+					$scope.name;
+					$scope.price;
+					$scope.ingredients = {};
+					$scope.createdRecipe = {id: Math.floor(1000 + Math.random() * 9000), name: $scope.name, price: $scope.price, ingredients: $scope.ingredients};
+				
+				
+				    // Print out recipe list
+				    console.log('Recipe list before adding: ');
+				    console.log($scope.recipeList);
+				
+				    // Error for invalid price
+				    if ($scope.price < 0) {
+					    alert("Error:\n\nThe price must be at least 0. Please try again.");
+				    }
+				    
+				    else {  // Valid price, check for duplicate name
+					    let hasDuplicate = false;
+				        for(let i = 0; i < $scope.recipeList.length; i++) {
+					    if($scope.recipeList[i]["name"].toUpperCase() === $scope.name.toUpperCase() ) {
+						    hasDuplicate = true;
+						    alert("Error:\n\nThe name you entered already exists. Please enter a new name.");
+						    break;
+					    }
+				    }
+				
+				    // Check valid ingredient amounts
+				    let validAmts = true;
+				    /* for(let i = 0; i < $scope.createdRecipe.length; i++){
+					    if($scope.createdRecipe.ingredients[i]["amount"] < 0) {
+						    validAmts = false;
+						    alert("Error:\n\nThe amount(s) entered for " + $scope.createdRecipe.ingredients[i]["name"] + " are invalid. Please try again.");
+						    break;
+						
+					    }
+				    } */
+				
+				    if(!hasDuplicate && validAmts) {
+					      $http.post("/api/v1/recipes", $scope.createdRecipe).then(function(success){
+					      $scope.success = true;
+					      alert("Success:\n\nThe recipe '" + $scope.name + "' has been successfully added.");
+					      }, function(rejection) {
+							    console.error("Error while creating recipe.");
+					      });
+			         }
+				}
+				
+				
+				};
+		
+			});
+				
+			
+			
+		</script>
+		
+      
+  </body>
+</html>
+
+

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Much of this code is from or based on the W3Schools website, including creating tabs and general styling: https://www.w3schools.com/
+	 Some code is also from stackoverflow.com for syntax and fixing minor errors.
+ -->
+ 
+<style>
+* {
+  box-sizing: border-box;
+}
+  body {
+	font-family: Calibri, sans-serif;
+	background-color: #c2a286; /*Brown*/
+	color: white; /* Controls all text color */
+  }
+  h1 {
+      text-align: center;
+	margin-top: 30px;
+	font-size: 40px;
+    font-family: Chalkduster, sans-serif;
+  }
+ 
+  /* Style the entire tab bar */
+.tab {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  border : 2px solid black;
+  margin-top: 20px;
+  display: inline-block;
+}
+  
+ /*Centers the entire tab bar on the page*/
+div.tab-container {
+  text-align: center;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 505;  
+  border : 2px solid black;
+  font-family: Calibri, sans-serif;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #5cd9ff;
+}
+ 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+  
+form {
+	border: 2px solid black;
+  border-radius: 4px;
+  display: inline-block;
+}
+  
+/* Create two equal columns that float next to each other */
+.column {
+	
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 400px; 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+p2 {
+  text-align: left;
+}
+
+</style>
+</head>
+  <body>
+    <div class ="tab-container"> 
+    <h1>Welcome to CoffeeMaker!</h1>
+    
+<hr style="color:green;">
+
+<div class="tab">
+  <button class="tablinks">Home</button>
+  <button class="tablinks">Add Recipe</button>
+  <button class="active">Add Ingredient</button>
+  <button class="tablinks">Edit Recipe</button>
+  <button class="tablinks">Delete Recipe</button>
+  <button class="tablinks">Order Beverage</button>
+  <button class="tablinks">Update Inventory</button>
+</div>
+<p style="text-align: center; font-size: 30px; font-family: Chalkduster, sans-serif;"> Add an Ingredient</p>
+<div class="row">
+
+  <div class="column" style="background-color:#c2a286;">
+    <p style="text-align: center; font-size: 20px; font-family: Chalkduster, sans-serif;">Enter Ingredient</p>
+    
+    <div ng-app="myApp" ng-controller="populateCtrl"> <!-- **Opening div tag** -->
+    <form action="/action_page.php">
+  <input type="text" ng-model="name" required="true" style="font-size:15px;" placeholder="Name"><br>
+  <input type="text" ng-model="initialAmount" required="true" style="font-size:15px;" placeholder="Initial Amount">
+  <br>
+</form>           
+    
+    <br/>
+    <input type="submit" value="Add Ingredient" ng-click="addIngredientSuccess()" style="background-color:#c27ba0; font-size:15px;"
+    		ng-if="initialAmount >= 0;">
+    
+       
+  <br/><br/><br/><br/>
+ 
+ 
+<div class="column" style="background-color:#c2a286;">
+  <p style="text-align: center; font-size: 20px; font-family: Chalkduster, sans-serif;">Current Ingredients
+  </p>
+    
+  <div style="height:250;width:100%;border:2px solid #000000;overflow:auto; background-color:white; color:black;">
+    <p2>
+      <ul ng-init="updateList()">
+      </ul>
+    </p2>
+    </div>
+    </div>
+    </div> <!-- **Closing div tag for Javascript 'myApp' and 'populateCtrl'** -->
+    
+  </div>
+</div>
+</div>
+
+		<script>
+			/* Without these comments, Thymeleaf will try to parse the Javascript as XML and break itself sometimes */
+			/*<![CDATA[*/
+			var app = angular.module('myApp', []);
+			app.controller('populateCtrl', function($scope, $http, $q) {
+				
+				
+				// Get the list of ingredients (is asynchronous)
+				$http.get("/api/v1/ingredients").then(function(response) 
+						{ $scope.ingredientList = response.data; });
+				
+				
+				// Update the "Current Ingredients" list
+				$scope.updateList = function() {
+					$scope.updateList.append('<ul>');
+					for (let i = 0; i < $scope.ingredientList.length; i++) {
+						$scope.updateList.append('<li><h2>' + $scope.ingredientList[i].name + '</h2></li>');
+						$scope.updateList.append('<li>' + $scope.ingredientList[i].amount + '</li>');
+					}
+					$scope.updateList.append('</ul>');
+				};
+				
+				
+				// SUCCESSFULL Add Ingredient Button
+				$scope.addIngredientSuccess = function() {
+					
+					
+					// Declare the variables for an ingredient object
+					// Currently uses a random 4-digit ID
+					$scope.name;
+					$scope.initialAmount;
+					$scope.createdIngredient = {id: Math.floor(1000 + Math.random() * 9000), name: $scope.name, amount: $scope.initialAmount};
+					//console.log($scope.createdIngredient);
+					
+					
+					// Prints the ingredient list before adding a new one
+					console.log('Ingredient List (BEFORE Adding):');
+					console.log($scope.ingredientList);
+					
+					
+					// ERROR message for an invalid amount
+					// Currently not used because of the "ng-if" statement (in the HTML) for the Add Ingredient button
+					if ($scope.initialAmount < 0) {
+						alert("ERROR:\n\nThe ingredient amount must be greater than or equal to 0. Please try again.");
+					}
+					
+					else { // Amount is valid, now check the name
+						let hasDuplicate = false;
+						for (let i = 0; i < $scope.ingredientList.length; i++) { // Check for a duplicate name
+							if ($scope.ingredientList[i]["name"].toUpperCase() === $scope.name.toUpperCase()) {
+								hasDuplicate = true;
+								alert("ERROR:\n\nThe name you entered already exists. Please enter a new name.");
+								break;
+							}
+						}
+						
+						
+						if (!hasDuplicate) { // The name and amount are both valid, now add the ingredient
+							$http.post("/api/v1/ingredients", $scope.createdIngredient).then(
+									function(success) { // Able to add successfully
+										$scope.success = true;
+										alert("SUCCESS:\n\nThe ingredient '" + $scope.name + "' with an amount of " + $scope.initialAmount + " has been successfully added.");
+									}, function(rejection) { // Error while trying to add
+										console.error("Error while adding ingredient.");
+									});
+						}
+	
+					}
+					
+					
+					// Prints the ingredient list after adding a new one
+					console.log('Ingredient List (AFTER Adding):');
+					console.log($scope.ingredientList);
+
+				};
+				
+			});
+			
+			
+		</script>
+
+      
+  </body>
+</html>
+
+
