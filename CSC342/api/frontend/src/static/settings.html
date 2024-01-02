@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Exhibition - Settings</title>
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script defer src = "js/menu.js" type="module"></script>
+    <!-- BEGIN INSTALLABLE APP-->
+    <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/icon-32x32.png">
+    <!-- END INSTALLABLE APP-->
+</head>
+
+<body>
+
+    <div class="titleBar">
+        <input type="image" src="images/three-line-menu-icon-12.jpg" id="menuButton" /></input>
+        <div id = "brandDiv">
+          <img src="images/logo2.png" class = "logo" alt="Logo" onclick="goToHomePage()">
+          <h1 class="titleText" >Nutrition Exhibition</h1>
+        </div>
+    
+    </div>
+
+    <div id="menu">
+        <div id="userIcon">
+        </div>
+    
+        <h3 id = "welcomeUser">Welcome, user!</h3>
+    
+        <div id="navigation">
+          <p><a href = "index.html" id = "homeLink">Home</a></p>
+          <hr>
+          <p><a href = "listDining.html">Browse Menus</a></p>
+          <hr>
+          <p><a href = "settings.html">Settings</a></p>
+          <hr>
+          <p id = "logoutSidebar"></p>
+        </div>
+    </div>
+        
+    <hr>
+    <div class="welcomeBox">
+        <h3><span>Change Settings</h3></span>
+        <br>
+    </div>
+
+    <div class="settingsContainer">
+        <h3><span>Toggle Theme (Light/Dark)</h3></span>
+        <br>
+        <h3><span>Toggle Sound Effects (On/Off)</h3></span>
+        <br>
+        <h3><span>Reset Stats</h3></span>
+        <br>
+        <h3><span>Submit Feedback</h3></span>
+    </div>
+
+    <footer class="extraLinks">
+        <button><span>FAQ</button></span>
+        <button><span>Privacy Policy</button></span>
+        <button><span>Terms</button></span>
+    </footer>
+
+
+</body>
+
+</html>

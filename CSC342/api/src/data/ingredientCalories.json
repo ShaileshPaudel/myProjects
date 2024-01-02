@@ -1,0 +1,38 @@
+[
+    {
+    "id": 0,
+    "name": "Bread",
+    "calories": 79,
+    "Quantity": 1,
+    "Unit":"n/a"
+    },
+    {
+    "id": 1,
+    "name": "Sausage",
+    "calories": 229,
+    "Quantity": 1,
+    "Unit":"n/a"
+    },
+    {
+    "id": 2,
+    "name": "Egg",
+    "calories": 78,
+    "Quantity": 1,
+    "Unit":"n/a"
+    },
+    {
+    "id": 3,
+    "name": "Chicken",
+    "calories": 284,
+    "Quantity": 100,
+    "Unit": "gram"
+    },
+    {
+    "id": 4,
+    "name": "Steak",
+    "calories": 271,
+    "Quantity": 100,
+    "Unit":"gram"
+    }
+
+]

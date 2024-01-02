@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game View</title>
+    <link rel="stylesheet" href="css/gameView1.css">
+    <script src="js/gameView.js"></script>
+    <script src="js/gameView1.js" type="module" defer></script>
+        <!-- BEGIN INSTALLABLE APP-->
+        <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
+        <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/images/icon-32x32.png">
+        <!-- END INSTALLABLE APP-->
+</head>
+<body>
+    <!--Logo-->
+    <div class="logo">
+        <img src="images/logo2.png" alt="Logo" onclick="goToHomePage()">
+    </div>
+
+    <!--Game Modes-->
+    <div class="gameModeContainer">
+        <button class="grid" id="gameMode1" onclick="switchToGameView1()">
+            <h3>Guess the Ingredients</h3>
+        </button>
+        <button class="grid" id="gameMode2" onclick="switchToGameView2()">
+            <h3>Calorie Count</h3>
+        </button>
+    </div>
+
+    <!--Food Image-->
+    
+    <div class="foodImg">
+        <img src="images/question_mark.png" alt="">        
+        <!-- <img src="images/hotdog.jpeg" alt=""> -->
+    </div>
+
+    <div class = "gameInfo">
+        <h3>Guess the Ingredients:</h3><br>
+        <h2 id = "recipeToGuess"></h2><br>
+        <p><i>Hint: There are the same number of correct answers as there are incorrect!</i></p>
+    </div>
+
+    <!--Based on code from W3Schools: https://www.w3schools.com/howto/howto_js_alert.asp-->
+    <div class="alert">
+        <p id="alertText"></p>
+        <br>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">OK</span>
+      </div> 
+
+    <!--Ingredient-->
+    <div class="ingredients" id = "ingredientContainer">
+        <!-- This will contain the ingredient buttons that are dynamically generated -->
+    </div>
+
+    <!--Guess Button-->
+    <div class="guessButton" id = "guessButton">
+        <button>GUESS</button>
+    </div>
+
+</body>
+</html>

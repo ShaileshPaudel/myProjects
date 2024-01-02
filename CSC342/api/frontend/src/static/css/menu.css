@@ -1,0 +1,87 @@
+img.logo{
+    border-radius: 200%;
+    max-width: 100px;
+    max-height: 100px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    @media (min-width: 650px) {
+        border-radius: 500%;
+        max-width: 150px;
+        max-height: 150px;
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+}
+
+#brandDiv {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+
+    @media (min-width: 650px) {
+        padding-right: 10%;
+    }
+
+}
+
+#menuButton {
+    grid-area: menuButton;
+    height: 40px;
+    white-space: normal;
+    transition: 0.3s;
+    opacity: 1;
+}
+
+#menuButton:hover {
+    opacity: 0.8;
+}
+
+#menu {
+    flex-direction: column;
+    align-items: center;
+
+    /* Set visibility to none until the menu button is clicked */
+    display: none;
+    position: fixed;
+    background-color: rgb(228, 225, 225);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    /* Default mobile width 40% */
+    width: 40%; 
+    /* Larger screens need less width -> use 20% */
+    @media (min-width: 650px) {
+        width: 20%; 
+        min-width: 260px;
+    }
+
+    border-right: solid #333333 2px;
+}
+
+#menu div {
+    width: 80%;
+    text-align: center;
+}
+
+#menu #userIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: #333333;
+    color: #ced4db;
+    margin-top: 20px;
+}
+
+#navigation a {
+    color:black !important;
+    text-decoration: none !important;
+}

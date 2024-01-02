@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game View</title>
+    <link rel="stylesheet" href="css/gameView2.css">
+    <script src="js/gameView2.js"></script>
+    <script src="js/gameView.js"></script>
+        <!-- BEGIN INSTALLABLE APP-->
+        <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
+        <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/images/icon-32x32.png">
+        <!-- END INSTALLABLE APP-->
+</head>
+<body>
+    <header>
+        <!--Logo-->
+        <div class="logo">
+            <img src="images/logo2.png" alt="Logo" onclick="goToHomePage()">
+        </div>
+    </header>
+    
+    <nav>
+        <!--Game Modes-->
+        <div class="gameModeContainer">
+            <button class="grid" id="gameMode1" onclick="switchToGameView1()">
+                <h3>Guess the Ingredients</h3>
+            </button>
+            <button class="grid" id="gameMode2" onclick="switchToGameView2()">
+                <h3>Calorie Count</h3>
+            </button>
+        </div>
+    </nav>
+    
+    <section>
+        <div class="heading1">
+            <p>Ingredients to select:</p>
+        </div>
+        <!--Ingredient List and Drag and Drop-->
+        <div class="dragIngredient" id="ingredientContainer">
+            <div class="cloudBox" id="Ingredient1" draggable="true" ondragstart="drag(event)">
+                <p>Ingredient 1</p>
+            </div>
+            <div class="cloudBox" id="Ingredient2" draggable="true" ondragstart="drag(event)">
+                <p>Ingredient 2</p>
+            </div>
+            <div class="cloudBox" id="Ingredient3" draggable="true" ondragstart="drag(event)">
+                <p>Ingredient 3</p>
+            </div>
+            <div class="cloudBox" id="Ingredient4" draggable="true" ondragstart="drag(event)">
+                <p>Ingredient 4</p>
+            </div>
+            <div class="cloudBox" id="Ingredient5" draggable="true" ondragstart="drag(event)">
+                <p>Ingredient 5</p>
+            </div>
+        </div>
+        <hr>
+        <div class="heading2">
+            <p class="mainHeading">Calories to Guess: 700</p>
+            <p>(Please drag and drop the Ingredients:)</p>
+        </div>
+    
+        <div class="dropIngredient" ondrop="drop(event)" ondragover="allowDrop(event)">
+        </div>
+    </section>
+    
+    <footer>
+        <!--Guess Button-->
+        <div class="guessButton">
+            <button>CHECK RESULT</button>
+        </div>
+    </footer>
+</body>
+</html>

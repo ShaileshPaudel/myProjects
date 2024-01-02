@@ -1,0 +1,86 @@
+#formDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#signupButton {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.singleLoginButton {
+    width: 4em;
+    background-color: rgb(255, 55, 55);
+    border: 2px solid black;
+    color: white;
+    font-size: 1.1em;
+    padding: 0.5em;
+
+    /* Used for larger screens (website version) */
+    @media (min-width: 650px) {
+        width: 5em;
+        font-size: 1.1em;
+    }
+}
+
+.singleSignupButton {
+    width: 6em;
+    background-color: rgb(52, 209, 0);
+    border: 2px solid black;
+    color: white;
+    font-size: 1.1em;
+    padding: 0.5em;
+
+    /* Used for larger screens (website version) */
+    @media (min-width: 650px) {
+        width: 7em;
+        font-size: 1.1em;
+    }
+}
+
+.singleSignupButton,  .singleLoginButton {
+    transition-duration: 0.3s;
+}
+
+.singleSignupButton:hover, .singleLoginButton:hover {
+    font-size: 1.2em;
+}
+
+#errorbox {
+    margin-top: 15px;
+    width: 80%;
+    color: rgb(216, 24, 24);
+    font-size: 14px;
+}
+
+a:link{
+    color:white;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color:white;
+    text-decoration: none;
+  }
+
+  /** Added later*/
+  #formDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  label{
+    margin-bottom: 5px;
+  }

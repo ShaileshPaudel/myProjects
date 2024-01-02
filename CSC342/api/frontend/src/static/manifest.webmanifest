@@ -1,0 +1,21 @@
+{
+    "name": "Nutrition Exhibition",
+    "short_name": "NE App",
+    "scope": "/",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#ffc34d",
+    "background_color": "#EEE",
+    "icons": [
+      {
+        "src": "/images/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/images/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }

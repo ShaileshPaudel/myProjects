@@ -1,0 +1,74 @@
+[
+  {
+    "id": 0,
+    "username": "bobrob",
+    "gamesPlayed": 16,
+    "game1Guesses": 25,
+    "game1Wins": 11,
+    "game2Guesses": 0,
+    "game2Wins": 0,
+    "avatar": "https://robohash.org/nullaautemin.png?size=64x64&set=set1",
+    "salt": "48c8947f69c054a5caa934674ce8881d02bb18fb59d5a63eeaddff735b0e9",
+    "password": "83d9bdb5e20f3571b087db9aabf190a296741c3e864d7742f35658cfccc1b79c4599aad25084aa9a28c649a50c92244227b3e53e197621301d619d1ea01873c4"
+  },
+  {
+    "id": 1,
+    "username": "jdoe",
+    "gamesPlayed": 37,
+    "game1Guesses": 22,
+    "game1Wins": 12,
+    "game2Guesses": 0,
+    "game2Wins": 0,
+    "avatar": "https://robohash.org/veniamdoloresenim.png?size=64x64&set=set1",
+    "salt": "801e87294783281ae49fc8287a0fd86779b27d7972d3e84f0fa0d826d7cb67dfefc",
+    "password": "e289219c34f9a32ebc82393f09719b7f34872de95463242b5ffe8bb4b11a5fe7d454f9f5d082c8207c5d69b220ba06624b4bb15ffa05cc7d7d53c43f9e96da6a"
+  },
+  {
+    "id": 2,
+    "username": "student",
+    "gamesPlayed": 37,
+    "game1Guesses": 65,
+    "game1Wins": 29,
+    "game2Guesses": 0,
+    "game2Wins": 0,
+    "avatar": "https://robohash.org/random?size=64x64&set=set1",
+    "salt": "ef79ab7f00670f004cc1d8ec973818e7990c7f0824fe84423f363a4d5e586262",
+    "password": "09239c1162108f2c57fbba2528715f9da3a9152187e65ba06bb91910c4eb758af2eeabfc02d813ce196bda5331300f8a5679027d197935632aba658de30023f8"
+  },
+  {
+    "id": 3,
+    "username": "hello",
+    "gamesPlayed": 300,
+    "game1Guesses": 201,
+    "game1Wins": 186,
+    "game2Guesses": 0,
+    "game2Wins": 0,
+    "avatar": "https://robohash.org/hello?size=64x64&set=set1",
+    "salt": "0606ca6eba4066a80f3df6a8a27b21e82e75b5c3be5890708c6484254ea0",
+    "password": "a1a91603bf2648dbcd5b14c4b9878d9d308b075c93a0e8d832146c667d15eae781062355181fb3d81a5a66f710adf0e3dde1b0fca477a46f1a4818f829536a17"
+  },
+  {
+    "id": 4,
+    "username": "IronMan",
+    "gamesPlayed": 34,
+    "game1Guesses": 12,
+    "game1Wins": 12,
+    "game2Guesses": 0,
+    "game2Wins": 0,
+    "avatar": "https://robohash.org/IronMan?size=64x64&set=set1",
+    "salt": "70ad2b4c5f956f79f884f601951aa92bacba7a55c3d104835eee34c75bbd",
+    "password": "4351e1ebe72466968e12b3455b4ab5bc5bd2bf8c161e6e975c67b8c4529a84ea8a258f5d67724c5fdb8952b2da78a1ed7676b9eb799adcacfec781859e08155a"
+  },
+  {
+    "id": 5,
+    "username": "newUser",
+    "gamesPlayed": 3,
+    "game1Guesses": 3,
+    "game1Wins": 0,
+    "game2Guesses": 0,
+    "game2Wins": 0,
+    "avatar": "https://robohash.org/newUser?size=64x64&set=set1",
+    "salt": "c2bb8f3a489954bb7747f4250f851664c8b5ef6c7245eb24df1782f7a9fa",
+    "password": "5874aecdb45d18799ba09c39f43fcde6bd7bdeeec300a2d5ea93da73e9df59ffe4b04e3a7551c9ae346d892bfc2317e027af869a754c16a26e2bbd8ce9564752"
+  }
+]

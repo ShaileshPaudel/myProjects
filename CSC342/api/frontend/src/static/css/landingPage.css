@@ -1,0 +1,103 @@
+/** CSS file used for index.html */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Open+Sans:wght@500&display=swap');
+
+body {
+    /* Controls all text color and font family */
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.titleText {
+    grid-area: titleText;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main .registrationButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    /* justify-content: space-between !important;
+    flex-wrap: wrap !important; */
+    gap: 2em;
+
+        /* Used for larger screens (website version) */
+        @media (min-width: 650px) {
+            gap: 3em;
+        }
+}
+
+.registrationButtons {
+    color: white;
+    font-size: 1.3em;
+    padding: 0.5em;
+    /* Used for larger screens (website version) */
+    @media (min-width: 650px) {
+        font-size: 1.4em;
+    }
+}
+
+.registrationButtons a {
+    transition-duration: 0.3s;
+}
+
+/* Slightly expand button on hover */
+.registrationButtons a:hover {
+    padding: 0.3em;
+}
+
+.signupButton {
+    width: 8em;
+    background-color: rgb(52, 209, 0);
+    border: 2px solid black;
+
+    /* Used for larger screens (website version) */
+    @media (min-width: 650px) {
+        width: 30%;
+        background-color: rgb(52, 209, 0);
+        border: 2px solid black;
+    }
+}
+
+.loginButton {
+    width: 5em;
+    background-color: rgb(255, 55, 55);
+    border: 2px solid black;
+
+    /* Used for larger screens (website version) */
+    @media (min-width: 650px) {
+        width: 20%;
+    }
+}
+
+a:link{
+    color:white;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color:white;
+    text-decoration: none;
+  }
+
+.extraLinks {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.extraLinks button {
+    display: inline-block;
+    background-color: #ced4db;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    font-size: 60%;
+}

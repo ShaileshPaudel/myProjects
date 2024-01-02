@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Exhibition - Dining Halls</title>
+    <link rel="stylesheet" href="css/listDining.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script defer src="js/menu.js" type="module"></script>
+    <script defer src="js/listDining.js" type="module"></script>
+    <!-- BEGIN INSTALLABLE APP-->
+    <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/icon-32x32.png">
+    <!-- END INSTALLABLE APP-->
+</head>
+
+<body>
+
+    <div class="titleBar">
+        <input type="image" src="images/three-line-menu-icon-12.jpg" id="menuButton" /></input>
+        <div id = "brandDiv">
+          <img src="images/logo2.png" class = "logo" alt="Logo" onclick="goToHomePage()">
+          <h1 class="titleText" >Nutrition Exhibition</h1>
+        </div>    
+    </div>
+
+    <div id="menu">
+        <div id="userIcon">
+        </div>
+
+        <h3 id="welcomeUser">Welcome, user!</h3>
+
+        <div id="navigation">
+            <p><a href="index.html" id="homeLink">Home</a></p>
+            <hr>
+            <p><a href="listDining.html">Browse Menus</a></p>
+            <hr>
+            <p><a href="settings.html">Settings</a></p>
+            <hr>
+            <p id="logoutSidebar"></p>
+        </div>
+    </div>
+
+
+
+
+    <hr>
+    <div class="welcomeBox">
+        <span>
+            <h3>Check out all the menu options below!</h3>
+            <em id="subText">Click a location to view the full page!</em>
+        </span>
+    </div>
+
+    <div class="container-wrapper">
+        <div class="container2" id="diningHall1">
+            <img src="./images/ovalDiningHall.jpg" alt="Oval Dining Hall Image">
+            <p>On The Oval Dining Hall</p>
+        </div>
+
+        <div class="container2" id="diningHall2">
+            <img src="./images/fountainDiningHall.jpg" alt="Fountain Dining Hall Image">
+            <p>Fountain Dining Hall</p>
+        </div>
+
+        <div class="container2" id="diningHall3">
+            <img src="./images/clarkDiningHall.jpg" alt="Clark Dining Hall Image">
+            <p>Clark Dining Hall</p>
+        </div>
+    </div>
+
+
+    <main>
+    </main>
+
+    <footer class="extraLinks">
+        <button><span>FAQ</button></span>
+        <button><span>Privacy Policy</button></span>
+        <button><span>Terms</button></span>
+    </footer>
+
+
+
+</body>
+
+</html>

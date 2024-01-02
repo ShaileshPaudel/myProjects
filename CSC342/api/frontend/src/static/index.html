@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome to Nutrition Exhibition!</title>
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/stats.css">
+  <link rel="stylesheet" href="css/landingPage.css">
+  <script defer src="js/landingPage.js" type="module"></script>
+  <script defer src="js/menu.js" type="module"></script>
+  <!-- BEGIN INSTALLABLE APP-->
+  <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/images/icon-32x32.png">
+  <!-- END INSTALLABLE APP-->
+</head>
+
+<body>
+  <div class="header">
+    <input type="image" src="images/three-line-menu-icon-12.jpg" id="menuButton" /></input>
+    <div id = "brandDiv">
+      <img src="images/logo2.png" class = "logo" alt="Logo" onclick="goToHomePage()">
+      <h1 class="titleText" >Nutrition Exhibition</h1>
+    </div>
+  </div>
+  <hr>
+
+  <div id="menu">
+    <div id="userIcon">
+    </div>
+
+    <h3 id="welcomeUser">Welcome, user!</h3>
+
+    <div id="navigation">
+      <p><a href="index.html" id="homeLink">Home</a></p>
+      <hr>
+      <p><a href="listDining.html">Browse Menus</a></p>
+      <hr>
+      <p><a href="settings.html">Settings</a></p>
+      <hr>
+      <p id="logoutSidebar"></p>
+    </div>
+  </div>
+
+  <main>
+
+    <div id="welcomeBox">
+      <h3>Click the play button below to begin the exhibition!</h3>
+      <h3>Want to track your stats? Create an account below!</h3>
+    </div>
+
+    <div class="registrationButtons">
+      <a class="signupButton" href="register.html"><span>Signup</a></span>
+      <a class="loginButton" href="login.html"><span>Login</a></span>
+    </div>
+
+    <div id="playButton">
+      <h2>PLAY</h2>
+    </div>
+
+
+    <div id="about">
+      <h3>About Nutrition Exhibition:</h3>
+
+      <div class="slidesDiv">
+        <p id="aboutP1">
+          <i>Nutrition Exhibition</i> is an interactive progressive web application where users play
+          minigames to learn about the food available in NC State University meal plans.
+        </p>
+
+        <p id="aboutP2">
+          This is so that the local community can have a raised awareness of what they’re eating,
+          and allow them to make better informed choices during their time here.
+        </p>
+      </div>
+
+      <div>
+        <button class="circleButton" id="showAbout1"></button>
+        <button class="circleButton" id="showAbout2"></button>
+      </div>
+    </div>
+
+
+
+  </main>
+
+  <footer class="extraLinks">
+    <button><span>FAQ</button></span>
+    <button><span>Privacy Policy</button></span>
+    <button><span>Terms</button></span>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,327 @@
+[
+    {
+        "id": 0,
+        "name": "Hot Dog",
+        "diningHall": "Oval",
+        "calories": 321.5,
+        "ingredients": [
+            {
+                "name": "Bun"
+            },
+            {
+                "name": "Sausage"
+            },
+            {
+                "name": "Onion"
+            },
+            {
+                "name": "Mustard"
+            }, 
+            {
+                "name": "Ketchup"
+            }
+        ]
+    }, 
+    {
+        "id": 1,
+        "name": "Traditional Pepperoni Pizza",
+        "diningHall": "Fountain",
+        "calories": 285.4,
+        "ingredients": [
+            {
+                "name": "Dough"
+            },
+            {
+                "name": "Cheese"
+            },
+            {
+                "name": "Pepperoni"
+            },
+            {
+                "name": "Tomato Sauce"
+            } 
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Cheeseburger",
+        "diningHall": "Oval",
+        "calories": 598.4,
+        "ingredients": [
+            {
+                "name": "Bun"
+            },
+            {
+                "name": "Patty"
+            },
+            {
+                "name": "Cheese"
+            },
+            {
+                "name": "Lettuce"
+            },
+            {
+                "name": "Tomato"
+            }
+
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Mushroom Lasagna",
+        "diningHall": "Oval",
+        "calories": 269,
+        "ingredients": [
+            {
+                "name": "Mushroom"
+            },
+            {
+                "name": "Cheese"
+            },
+            {
+                "name": "Noodles"
+            },
+            {
+                "name": "Tomato Sauce"
+            } 
+        ]
+    },
+    {
+        "id": 5,
+        "name": "French Fries",
+        "diningHall": "Oval",
+        "calories": 397,
+        "ingredients": [
+            {
+                "name": "Potatoes"
+            },
+            {
+                "name": "Vegetable Oil"
+            },
+            {
+                "name": "Salt"
+            } 
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Waffle Fries",
+        "diningHall": "Fountain",
+        "calories": 320.7,
+        "ingredients": [
+            {
+                "name": "Potatoes"
+            },
+            {
+                "name": "Vegetable Oil"
+            },
+            {
+                "name": "Salt"
+            } 
+        ]
+
+    },
+    {
+        "id": 6,
+        "name": "Penne Pasta",
+        "diningHall": "Clark",
+        "calories": 198.1,
+        "ingredients": [
+            {
+                "name": "Penne Pasta"
+            },
+            {
+                "name": "Tomato Sauce"
+            },
+            {
+                "name": "Cheese"
+            },
+            {
+                "name": "Garlic"
+            } 
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Lemon Pepper Chicken",
+        "diningHall": "Fountain",
+        "calories": 145.5,
+        "ingredients": [
+            {
+                "name": "Chicken Breast"
+            },
+            {
+                "name": "Lemon"
+            },
+            {
+                "name": "Black Pepper"
+            },
+            {
+                "name": "Garlic"
+            } 
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Spring Roll",
+        "diningHall": "Oval",
+        "calories": 141.4,
+        "ingredients": [
+            {
+                "name": "Carrots"
+            },
+            {
+                "name": "Vermicelli"
+            },
+            {
+                "name": "Cabbage"
+            },
+            {
+                "name": "Lettuce"
+            } 
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Spam Fried Rice",
+        "diningHall": "Oval",
+        "calories": 235.5,
+        "ingredients": [
+            {
+                "name": "Rice"
+            },
+            {
+                "name": "Spam"
+            },
+            {
+                "name": "Carrots"
+            },
+            {
+                "name": "Soy Sauce"
+            } 
+
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Thai Garlic Beans",
+        "diningHall": "Oval",
+        "calories": 57.8,
+        "ingredients": [
+            {
+                "name": "Green Beans"
+            },
+            {
+                "name": "Soy Sauce"
+            },
+            {
+                "name": "Chili Paste"
+            },
+            {
+                "name": "Garlic"
+            } 
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Balsamic Roasted Brussel Sprouts",
+        "diningHall": "Clark",
+        "calories": 110.3,
+        "ingredients": [
+            {
+                "name": "Brussel Sprouts"
+            },
+            {
+                "name": "Balsamic Vinegar"
+            },
+            {
+                "name": "Salt Kosher"
+            },
+            {
+                "name": "Garlic"
+            } 
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Creamy Mushroom Steak",
+        "diningHall": "Fountain",
+        "calories": 514.3,
+        "ingredients": [
+            {
+                "name": "Mushroom"
+            },
+            {
+                "name": "Whole Milk"
+            },
+            {
+                "name": "Beef"
+            },
+            {
+                "name": "Pepper & Onion"
+            } 
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Bavarian Pretzel Sticks",
+        "diningHall": "Clark",
+        "calories": 170.1,
+        "ingredients": [
+            {
+                "name": "Yeast"
+            },
+            {
+                "name": "Wheat Flour"
+            },
+            {
+                "name": "Palm Oil"
+            },
+            {
+                "name": "Salt"
+            } 
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Spiced Sausage Pizza",
+        "diningHall": "Clark",
+        "calories": 288.1,
+        "ingredients": [
+            {
+                "name": "Cheese"
+            },
+            {
+                "name": "Dough"
+            },
+            {
+                "name": "Sausage"
+            },
+            {
+                "name": "Tomato Sauce"
+            } 
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Homemade Chicken Salad",
+        "diningHall": "Fountain",
+        "calories": 170,
+        "ingredients": [
+            {
+                "name": "Chicken"
+            },
+            {
+                "name": "Celery"
+            },
+            {
+                "name": "Onion"
+            },
+            {
+                "name": "Mayonnaise"
+            } 
+        ]
+    }
+
+
+]

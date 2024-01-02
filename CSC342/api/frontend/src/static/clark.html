@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Exhibition - Clark</title>
+    <link rel="stylesheet" href="css/diningHall.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script defer src="js/menu.js" type="module"></script>
+    <script defer src = "js/diningCommon.js" type = "module" defer></script>
+    <!-- BEGIN INSTALLABLE APP-->
+    <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/images/icon-32x32.png">
+    <!-- END INSTALLABLE APP-->
+</head>
+
+<body id="Clark">
+
+    <div class="titleBar">
+        <input type="image" src="images/three-line-menu-icon-12.jpg" id="menuButton" /></input>
+        <div id = "brandDiv">
+          <img src="images/logo2.png" class = "logo" alt="Logo" onclick="goToHomePage()">
+          <h1 class="titleText" >Nutrition Exhibition</h1>
+        </div>    
+    </div>
+
+    <div id="menu">
+        <div id="userIcon">
+        </div>
+    
+        <h3 id = "welcomeUser">Welcome, user!</h3>
+    
+        <div id="navigation">
+          <p><a href = "index.html" id = "homeLink">Home</a></p>
+          <hr>
+          <p><a href = "listDining.html">Browse Menus</a></p>
+          <hr>
+          <p><a href = "settings.html">Settings</a></p>
+          <hr>
+          <p id = "logoutSidebar"></p>
+        </div>
+    </div>
+    
+
+    <hr>
+    <div class="welcomeBox">
+        <h3><span>Clark Dining Hall</h3></span>
+    </div>
+
+    <div class="mainImage">
+        <img src="./images/clarkDiningHall.jpg" alt="Picture of the dining hall.">
+    </div>
+    <br>
+
+    <main>
+        <div id="about">
+            <i>Clark</i> is a popular dining hall at NC State University, located by the Frank Thompson Performance Hall, and can be 
+            accessed by meal swipes for breakfast, lunch, and dinner. Although it usually closes an hour earlier than the more popular <i>Fountain</i>,
+            <i>Clark</i> offers a smaller, cozy alternative where many students love to grab a meal. 
+        </p>
+
+        <p>
+            Check out the <a href="https://dining.ncsu.edu/location/clark/" target="_blank">full website</a>
+            to view more information, including information about location and hours!
+        </p>
+
+        </div>
+        <div id="hallMenu">
+            <h3>Menu at <i>Clark</i></h3>
+
+            <table id="recipeTable">
+                <thead>
+                    <tr>
+                        <th>Recipe</th>
+                        <th>Calories</th>
+                        <th class = "ingredientCell">Main Ingredients</th>
+                    </tr>
+                </thead>
+                <tbody id ="recipeTableBody">
+                    <!-- Table content will be generated dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="extraLinks">
+        <button><span>FAQ</button></span>
+        <button><span>Privacy Policy</button></span>
+        <button><span>Terms</button></span>
+    </footer>
+
+
+
+</body>
+
+</html>
